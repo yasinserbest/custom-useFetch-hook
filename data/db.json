@@ -1,0 +1,61 @@
+{
+  "vocabularies": [
+    {
+      "id": "2394",
+      "en": "mobilize",
+      "tr": "Belirli bir grubu harekete geçirmek\n2-hazırlanmak",
+      "example": "Representatives for all the main candidates are trying to mobilize voter support.\n2-The government has mobilized several of the army's top combat units."
+    },
+    {
+      "id": "3",
+      "en": "abattoir",
+      "tr": "mezbaha, hayvan kesilen yer",
+      "example": "The city was growing but the volume of meat handled in the abattoir was declining."
+    },
+    {
+      "id": "4",
+      "en": "abbey",
+      "tr": "manastır, din adamlarının yetişme yeri",
+      "example": "The abbey was to achieve a much clearer victory in 1120."
+    },
+    {
+      "en": "abbreviate",
+      "tr": "kelimerin baş harflerini kullanarak kısaltma",
+      "pronunciation": "abrevieyt",
+      "example": "\"Daniel\" is often abbreviated to \"Dan\".",
+      "id": "5"
+    },
+    {
+      "id": "6",
+      "en": "abdicate",
+      "tr": "Tahttan çekilmek",
+      "example": "King Edward VIII abdicated (the British throne) in 1936."
+    },
+    {
+      "en": "abductt",
+      "tr": "kaçırmak(birini)",
+      "pronunciation": "abdaktk",
+      "id": "7"
+    },
+    {
+      "id": "8",
+      "en": "aberration",
+      "tr": "Anlık normelden sapma",
+      "PRONUNCIATION": "Abıreyşın",
+      "example": "In a moment of aberration, she agreed to go with him."
+    },
+    {
+      "id": "9",
+      "en": "abet",
+      "tr": "Kışkırtmak (yasal olmayan veya kötü bir şeye)",
+      "PRONUNCIATION": "abet",
+      "example": "His accountant had aided and abetted him in the fraud."
+    },
+    {
+      "id": "10",
+      "en": "abide",
+      "tr": "Tahammül etmek, dayanmak",
+      "example": "I can’t abide her."
+    }
+  ]
+}

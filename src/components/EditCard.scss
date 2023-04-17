@@ -1,0 +1,12 @@
+.editCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.7rem;
+
+  &__backBtn {
+    color: purple;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
