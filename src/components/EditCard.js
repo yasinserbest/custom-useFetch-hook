@@ -1,26 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useHttp from "../hooks/useHttp";
+import VocabularyContext from "../store/vocabulary-context";
 import "./EditCard.scss";
 
-function EditCard({ onDeleteVocabulary, onUpdateVocabulary }) {
+function EditCard() {
   const { isLoading, error, sendRequest } = useHttp();
   const params = useParams();
   const navigate = useNavigate();
 
-  const [card, setCard] = useState([]);
-
-  useEffect(() => {
-    const getData = (data) => {
-      setCard(data);
-    };
-    sendRequest(
-      {
-        url: `${process.env.REACT_APP_BASE_URL}/${params.cardId}`,
-      },
-      getData
-    );
-  }, [sendRequest]);
+  const vocabCtx = useContext(VocabularyContext);
+  const [card, setCard] = useState(
+    vocabCtx.getVocabularyById(params.cardId)[0]
+  );
 
   const onDeleteHandler = async (e) => {
     e.preventDefault();
@@ -31,9 +23,10 @@ function EditCard({ onDeleteVocabulary, onUpdateVocabulary }) {
         "Content-type": "application/json",
       },
     });
-    onDeleteVocabulary(params.cardId);
+    vocabCtx.deleteVocabulary(params.cardId);
     navigate("/");
   };
+
   const onUpdateHandler = async (e) => {
     e.preventDefault();
     sendRequest({
@@ -49,7 +42,7 @@ function EditCard({ onDeleteVocabulary, onUpdateVocabulary }) {
         example: card.example,
       },
     });
-    onUpdateVocabulary(params.cardId, card);
+    vocabCtx.updateVocabulary(params.cardId, card);
     navigate("/");
   };
 
@@ -127,7 +120,6 @@ function EditCard({ onDeleteVocabulary, onUpdateVocabulary }) {
       <button onClick={onDeleteHandler}>DELETE</button>
     </div>
   );
-  // return <button onClick={onDeleteHandler}>DELETE</button>;
 }
 
 export default EditCard;

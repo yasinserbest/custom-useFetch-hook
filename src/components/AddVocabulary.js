@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import useHttp from "../hooks/useHttp";
+import VocabularyContext from "../store/vocabulary-context";
 import "./AddVocabulary.scss";
-function AddVocabulary({ onAddCard }) {
+function AddVocabulary() {
+  const vocabCtx = useContext(VocabularyContext);
+
+  const lastElementsId =
+    Number(vocabCtx.getAllVocabularies().slice(-1)[0]?.id) + 1; //this is for id of new created element
+
   const [showForm, setshowForm] = useState(false);
   const [en, setEn] = useState();
   const [tr, setTr] = useState();
@@ -24,9 +30,10 @@ function AddVocabulary({ onAddCard }) {
           tr,
           pronunciation: pro,
           example,
+          id: "" + lastElementsId, //convert to string
         },
       },
-      (data) => onAddCard(data)
+      (data) => vocabCtx.addVocabulary(data)
     );
   };
   return (

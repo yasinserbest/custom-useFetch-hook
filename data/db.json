@@ -1,16 +1,11 @@
 {
   "vocabularies": [
     {
-      "id": "2394",
-      "en": "mobilize",
-      "tr": "Belirli bir grubu harekete geçirmek\n2-hazırlanmak",
-      "example": "Representatives for all the main candidates are trying to mobilize voter support.\n2-The government has mobilized several of the army's top combat units."
-    },
-    {
-      "id": "3",
       "en": "abattoir",
       "tr": "mezbaha, hayvan kesilen yer",
-      "example": "The city was growing but the volume of meat handled in the abattoir was declining."
+      "pronunciation": "ebatori",
+      "example": "The city was growing but the volume of meat handled in the abattoir was declining.",
+      "id": "3"
     },
     {
       "id": "4",
@@ -56,6 +51,16 @@
       "en": "abide",
       "tr": "Tahammül etmek, dayanmak",
       "example": "I can’t abide her."
+    },
+    {
+      "en": "water",
+      "tr": "k",
+      "pronunciation": "water",
+      "example": "ı like",
+      "id": "11"
+    },
+    {
+      "id": "12"
     }
   ]
 }
